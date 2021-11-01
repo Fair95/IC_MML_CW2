@@ -14,14 +14,14 @@ class TestCoursework(unittest.TestCase):
         dummy_input = np.array([[2.5], [3.5]])
         output = f1(dummy_input)
         target_output = 25.5
-        self.assertAlmostEqual(output, target_output, 1e-3)
+        self.assertAlmostEqual(output, target_output, delta=1e-3)
 
     def test_f2(self):
         """ Test whether (given) function f2 is correct by evaluating one point. """
         dummy_input = np.array([[2.5], [3.5]])
         output = f2(dummy_input)
         target_output = 25.202135120387183
-        self.assertAlmostEqual(output, target_output, 1e-3)
+        self.assertAlmostEqual(output, target_output, delta=1e-3)
 
     def test_f3(self):
         """ Test whether (given) function f3 is correct by evaluating one point. """
@@ -29,7 +29,7 @@ class TestCoursework(unittest.TestCase):
         output = f3(dummy_input)
 
         target_output = 0.8313103674065578
-        self.assertAlmostEqual(output, target_output, 1e-3)
+        self.assertAlmostEqual(output, target_output, delta=1e-3)
 
     def test_f1_minimum_check(self):
         """ Unit test to check whether the 'f1_minimum_check' function is correct. """
